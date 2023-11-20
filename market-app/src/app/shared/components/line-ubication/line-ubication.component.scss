@@ -1,0 +1,52 @@
+@use "../../../../base_scss/mixins" as m;
+@import "../../../../base_scss/variables";
+
+.container-line {
+  width: 100%;
+  height: 4rem;
+  background-color: $naranjaFondo;
+  display: flex;
+  flex-direction: row;
+
+  .text-mobile {
+    margin-left: 1rem;
+  }
+
+  .text-mobile p {
+    font-size: 1.7rem;
+  }
+
+  img {
+    width: 3rem;
+  }
+
+  p {
+    font-family: $fuente_principal;
+    color: $blanco;
+    font-weight: $extraBold;
+    font-size: 1.8rem;
+  }
+}
+
+.line-content {
+  display: flex;
+  align-items: center;
+  margin-left: 5rem;
+  gap: 1rem;
+}
+
+@include m.tablet {
+  .text-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text {
+    display: none;
+  }
+
+  .line-content {
+    margin-left: 2rem;
+  }
+}

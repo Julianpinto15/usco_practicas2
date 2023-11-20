@@ -1,0 +1,45 @@
+@use "./variables" as v;
+
+@mixin telefono {
+  @media (min-width: v.$telefono) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin tabletMax {
+  @media (max-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$desktop) {
+    @content;
+  }
+}
+@mixin grid($columnas, $espaciado) {
+  display: grid;
+  gap: $espaciado;
+  grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin boton($bgColor) {
+  background-color: $bgColor;
+  color: $negro;
+  font-size: 2rem;
+  font-family: $fuente_principal;
+  font-weight: $bold;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}

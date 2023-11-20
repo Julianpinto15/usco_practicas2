@@ -1,0 +1,144 @@
+@use "../../../../base_scss/mixins" as m;
+@import "../../../../base_scss/variables";
+@import "../../../../layout/botones";
+
+.container-types {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.content-img {
+  display: flex;
+}
+
+.otro-contenedor {
+  position: absolute;
+}
+
+.logo {
+  height: 11.2rem;
+  margin-left: 3rem;
+  cursor: pointer;
+
+  @include m.tablet {
+    min-width: 23rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 0;
+    min-width: 23rem;
+    margin-right: 2.5rem;
+  }
+}
+
+/* style boton de categoria */
+.categoria {
+  cursor: pointer;
+
+  img {
+    width: 15rem;
+  }
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+
+@include m.desktop {
+  .categoria {
+    display: block;
+  }
+}
+
+/*Style boton de registro de ususario*/
+.registro-usuario {
+  img {
+    width: 15rem;
+  }
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+
+@include m.desktop {
+  .registro-usuario {
+    display: block;
+  }
+}
+
+// Style the navegation the first page
+
+//Logo car and user responsive mobile
+@media screen and (max-width: 480px) {
+  .search-bar {
+    display: none;
+  }
+
+  .icon-car {
+    margin-right: 6rem;
+  }
+
+  .logo-user {
+    display: none;
+  }
+
+  .logo-categoria {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+  }
+}
+
+//logo user and car responsive tablet
+@include m.tablet {
+  .search-bar {
+    margin-top: 1rem;
+    width: 30%;
+  }
+
+  .logo-categoria {
+    display: flex;
+    padding-top: 3.5rem;
+    margin-left: 3.3rem;
+
+    img {
+      width: 4rem;
+    }
+  }
+
+  .logo-user {
+    position: relative;
+    left: 2.5rem;
+
+    img {
+      width: 4rem;
+    }
+  }
+}
+
+@include m.desktop {
+  .search-bar {
+    margin-top: 1rem;
+    flex: 0;
+  }
+
+  .logo-categoria {
+    display: none;
+  }
+  .logo-user {
+    display: none;
+  }
+}

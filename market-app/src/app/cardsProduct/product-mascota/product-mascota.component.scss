@@ -1,0 +1,122 @@
+@use "../../../base_scss/mixins" as m;
+@import "../../../base_scss/variables";
+
+.container-box {
+  padding: 1rem;
+  width: 20rem;
+  height: 30rem;
+  border: 0 solid;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 1rem 3rem $negro;
+}
+
+.cards {
+  display: flex; /* Establece un contenedor flexible */
+  flex-direction: column;
+  align-items: center;
+  width: 18rem;
+
+  .img-product {
+    max-width: 25rem;
+    object-fit: cover;
+  }
+  img {
+    width: 100%;
+    height: 13rem;
+  }
+
+  .content {
+    padding: 1rem; /* Añade un poco de espacio entre los elementos */
+
+    .precio {
+      text-align: start;
+      font-size: 1.5rem;
+      color: $rojo;
+    }
+
+    hr {
+      color: $naranjaFondo;
+    }
+
+    p {
+      margin: 0; /* Elimina el margen inferior del párrafo para alinear los elementos verticalmente */
+      font-size: 1.5rem;
+      text-align: start;
+      max-width: 100%;
+      line-height: 2rem;
+    }
+
+    span {
+      color: $gris;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background-color: $amarillo;
+    color: $negro;
+    font-size: 2rem;
+    font-family: $fuente_principal;
+    font-weight: $bold;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    height: 5rem;
+
+    img {
+      width: 2rem;
+    }
+  }
+}
+
+.content-position {
+  display: grid;
+  place-items: center;
+
+  @include m.tablet {
+    grid-template-columns: repeat(3, 1fr);
+
+    .container-box {
+      width: auto;
+      height: auto;
+      margin: 1rem;
+      overflow: hidden;
+    }
+  }
+}
+
+@include m.desktop {
+  .content-position {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Estilos para teléfono móvil */
+  .img-product img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .cards {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .content-position {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .container-box {
+    width: calc(100% - 2rem);
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+}

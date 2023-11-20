@@ -1,0 +1,22 @@
+@import "../../../../base_scss/variables";
+
+ul,
+li,
+a {
+  text-decoration: none;
+  font-family: $fuente_principal;
+  font-weight: $extraBold;
+  font-size: 2rem;
+  color: $blanco;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-left: 3.2rem;
+}
+
+ul,
+li,
+a:hover {
+  color: $amarillo;
+}

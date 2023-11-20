@@ -1,0 +1,28 @@
+<div class="container content-position">
+  <div *ngFor="let product of allProducts" class=" container-box">
+    <div class="cards">
+
+      <div class="container img-product">
+        <img src={{product.imageUrl}} alt="imagen producto">
+      </div>
+
+      <div class="content">
+        <p class="precio">${{product.price}}</p>
+        <hr>
+        <p>{{product.description}}</p>
+        <p><span>{{product.medida}}</span></p>
+        <hr>
+      </div>
+
+      <div class="btn-car">
+        <button (click)="agregarCarrito(product)">
+          Agregar
+          <img src="../../../../assets/img/carrito.svg" alt="">
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

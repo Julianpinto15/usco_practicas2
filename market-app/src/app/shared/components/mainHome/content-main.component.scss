@@ -1,0 +1,15 @@
+.anuncio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+
+  @media (max-width: 480px) {
+    margin-top: 22rem;
+  }
+}
+
+.anuncio-position {
+  text-align: center;
+  margin: 4rem;
+}

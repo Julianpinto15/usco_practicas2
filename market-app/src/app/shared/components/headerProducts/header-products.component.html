@@ -1,0 +1,50 @@
+<div class="content-img ">
+
+  <div class="logo-categoria">
+    <a href="#">
+      <img src="../../../assets/img/iconoCategoria.svg" alt="Icono Categoria">
+    </a>
+  </div>
+
+  <div class="logo">
+    <a class="img-logo" [routerLink]="['/inicio']" routerLinkActive="router-link-active">
+      <img src="../../../../assets/img/logo.svg" alt="image logo">
+    </a>
+  </div>
+
+
+  <!-- contenedor para desktop que almacena categoria, searchbar, icon-car, registro de usuario -->
+  <div class="container-types">
+
+    <div class="categoria">
+      <img src="../../../../assets/img/btnCategoria.svg" alt="Categoria">
+    </div>
+
+    <div class="search-bar">
+      <shared-search-bar></shared-search-bar>
+    </div>
+
+    <!-- muestra la venta del usuario para su registro -->
+    <div (click)="ventanaUser()" class="registro-usuario">
+      <img src="../../../../assets/img/btnRegistroUsuario.svg" alt="boton registro de usuario">
+    </div>
+
+    <div (click)="ventanaUser()" class="logo-user">
+      <img class="logo-user" src="../../../../assets/img/iconoUser.svg" alt="Logo usuario">
+    </div>
+
+    <div *ngIf="(mostrarContenedor$ | async)" class="otro-contenedor">
+      <admin-inicio-sesion></admin-inicio-sesion>
+    </div>
+
+    <div (click)="toggleCarrito()" class="icon-car">
+      <img src="../../../../assets/img/logoCarrito.svg" alt="boton registro de usuario">
+    </div>
+
+    <div *ngIf="(mostrarCarrito$ | async)" class="otro-contenedor">
+      <shared-carrito-buy></shared-carrito-buy>
+    </div>
+
+  </div>
+
+</div>

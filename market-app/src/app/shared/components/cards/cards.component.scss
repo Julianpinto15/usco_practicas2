@@ -1,0 +1,46 @@
+@use "../../../../base_scss/mixins" as m;
+@import "../../../../base_scss/variables";
+
+.text-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 rem;
+
+  h3 {
+    margin: 0;
+    font-weight: $extraBold;
+    text-align: initial;
+  }
+
+  a {
+    color: $negro;
+  }
+
+  @include m.tablet {
+    margin: 2rem 3rem;
+  }
+
+  @include m.desktop {
+    margin: 3rem 6rem;
+  }
+}
+
+/*Style for movil dispositives*/
+@media screen and (max-width: 480px) {
+  .text-content {
+    h3 {
+      padding: 2rem;
+      font-size: 2rem;
+      text-align: initial;
+      font-weight: $extraBold;
+    }
+
+    p {
+      font-size: 2rem;
+      padding: 2rem;
+      white-space: nowrap;
+    }
+  }
+}

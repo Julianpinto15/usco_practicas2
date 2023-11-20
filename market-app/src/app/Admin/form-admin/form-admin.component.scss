@@ -1,0 +1,135 @@
+@use "../../../base_scss/mixins" as m;
+@import "../../../base_scss/variables";
+
+.container-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%; /* Ancho para móviles, con un margen de 20px */
+  height: 100%;
+  border: 0 solid;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 2rem $negro;
+  margin: 0;
+  z-index: 999;
+}
+
+.car-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.car-text h3 {
+  font-size: 2rem;
+}
+
+.car-img {
+  width: 3rem;
+}
+
+/*Style for cards product car*/
+.container-product {
+  width: 90%;
+  height: 10rem;
+  border: 0 solid;
+  box-shadow: 0 0 1rem $negro;
+  border-radius: 2rem;
+  margin: 0 auto;
+}
+
+.image img {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  width: 35%;
+  object-fit: cover;
+}
+
+@include m.tablet {
+  .container-content {
+    width: calc(60% - 20px);
+    border-radius: 3rem 0 0 5rem;
+  }
+  .car-text h3 {
+    font-size: 3rem;
+  }
+
+  .image img {
+    width: 30%;
+  }
+}
+
+@include m.desktop {
+  .container-content {
+    width: calc(40% - 20px);
+    border-radius: 3rem 0 0 5rem;
+  }
+  .car-text h3 {
+    font-size: 3rem;
+  }
+  .image img {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 0;
+    width: 25%;
+  }
+}
+
+p {
+  color: $gris;
+  font-style: initial;
+  font-weight: $bold;
+  margin: 2rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+
+  input {
+    width: 25rem;
+    height: 3rem;
+    border-radius: 3rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+  }
+
+  input::placeholder {
+    text-align: center;
+  }
+
+  label {
+    text-transform: uppercase;
+  }
+}
+
+#password {
+  width: 20rem;
+}
+
+button,
+a {
+  width: 10rem;
+  margin: 0 auto;
+  background-color: $verdeClaroNavegacion;
+  color: $blanco;
+  font-size: 2rem;
+  font-family: $fuente_principal;
+  font-weight: $bold;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95); // Escala el contenedor cuando se presiona
+  }
+}

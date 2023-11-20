@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+  <header>
+    <supermarket-header-home></supermarket-header-home>
+  </header>
+
+  <main>
+    <sidenav-sidenav (onToggleSideNav)="onToggleSideNav($event)"></sidenav-sidenav>
+
+    <!-- Cambiar de [screeWidth] a [screenWidth] -->
+    <app-sider-bar [collapse]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-sider-bar>
+
+
+  </main>
+</body>
+
+</html>

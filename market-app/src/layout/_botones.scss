@@ -1,0 +1,5 @@
+@import "../base_scss/mixins";
+
+.boton-amarillo {
+  @include boton($amarillo);
+}

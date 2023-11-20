@@ -1,0 +1,112 @@
+@use "../../../../base_scss/mixins" as m;
+@import "../../../../base_scss/variables";
+@import "../../../../layout/botones";
+
+.content-img {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  height: 11.2rem;
+  margin-left: 3rem;
+  cursor: pointer;
+
+  @include m.tablet {
+    min-width: 23rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 0;
+    min-width: 23rem;
+    margin-right: 2.5rem;
+  }
+}
+
+.domiciliary {
+  margin: 1rem 9rem;
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+
+// Style the navegation the first page
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+
+  .logo-categoria {
+    display: flex;
+  }
+}
+
+//Logo car and user responsive mobile
+@media screen and (max-width: 480px) {
+  .menu {
+    display: none;
+  }
+
+  .logo-ubication {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    right: 3rem;
+    gap: 3rem;
+  }
+}
+
+//logo user and car responsive tablet
+@include m.tablet {
+  .menu {
+    display: none;
+  }
+
+  .logo-ubication {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    padding-top: 3rem;
+    right: 3rem;
+    gap: 7rem;
+
+    img {
+      width: 4.5rem;
+    }
+  }
+
+  .logo-user {
+    margin-top: 0.2rem;
+  }
+}
+
+@include m.desktop {
+  .menu {
+    display: block;
+    margin-top: 1.7rem;
+  }
+
+  .logo-categoria {
+    display: none;
+  }
+  .logo-user {
+    display: none;
+  }
+}
+
+// .categoria-btn {
+//   width: 14rem;
+//   margin-top: 3rem;
+//   margin-left: 3rem;
+//   cursor: pointer;
+// }
+
+// .category-icon {
+//   padding-top: 3rem;
+//   padding-left: -5rem;
+//   cursor: pointer;
+// }

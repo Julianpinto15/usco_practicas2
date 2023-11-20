@@ -1,0 +1,29 @@
+<div class="container-content">
+  <div class="car-text">
+    <h3>Mi cuenta</h3>
+    <div (click)="cerrarFormularioAdmin()" class="car-img">
+      <img src="../../../../assets/img/close.svg" alt="Boton cerrar">
+    </div>
+  </div>
+  <p>Registra tu usuario e ingresa con nosotros</p>
+  <div class="content">
+    <h3>Administrador</h3>
+    <div class="content-form">
+      <form action="" class="formulario">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="correo@gmail.com" [(ngModel)]="formData.email">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Tu contraseña"
+          [(ngModel)]="formData.password">
+        <!-- <a [routerLink]="['/PanelAdminComponent']" routerLinkActive="router-link-active"> -->
+        <a [routerLink]="['/admin/panel']" routerLinkActive="router-link-active">Enviar</a>
+        <button (click)="volverAInicioSesion()">Volver</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- (click)="registrarUsuario()" -->
+
+<img src="../../page/panel-admin" alt="">

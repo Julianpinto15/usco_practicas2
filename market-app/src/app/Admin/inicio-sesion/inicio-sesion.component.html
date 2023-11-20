@@ -1,0 +1,32 @@
+<div class="container-content">
+
+  <div class="car-text">
+    <h3>Mi cuenta</h3>
+    <div (click)="cerrarVentana()" class="car-img">
+      <img src="../../../../assets/img/close.svg" alt="Boton cerrar">
+    </div>
+  </div>
+
+  <p>Registra tu usuario e ingresa con nosotros</p>
+
+  <div class="content">
+
+    <h3>Administrador</h3>
+    <div (click)="mostrarFormularioAdmin()" class="content-registro">
+      <p>Ingresa con email y contraseña</p>
+    </div>
+
+    <div *ngIf="mostrarFormAdmin" class="content">
+      <h3>Administrador</h3>
+      <app-form-admin (cerrarFormulario)="cerrarVentana()" (volverInicioSesion)="volverAInicioSesion()">
+      </app-form-admin>
+    </div>
+
+    <h3>usuario</h3>
+    <div class="content-registro">
+      <p>Registrarme</p>
+    </div>
+
+  </div>
+
+</div>

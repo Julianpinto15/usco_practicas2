@@ -1,0 +1,65 @@
+@import "../../../../base_scss/variables";
+
+.container-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 17rem;
+  margin-top: 5rem;
+  background-color: $naranjaFondo;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  line-height: 0.2;
+}
+
+.content-copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+.content-help {
+  position: absolute;
+  top: 0.5rem;
+  right: 10rem;
+  padding: 0;
+  margin: 0;
+
+  .enlace {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-footer {
+    height: 24rem;
+  }
+
+  .content-text {
+    padding-left: 7rem;
+    margin-bottom: 8rem;
+  }
+
+  .content-help {
+    top: 11rem;
+
+    p {
+      margin: 0.2rem;
+    }
+  }
+}
